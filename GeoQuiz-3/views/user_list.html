@@ -1,0 +1,199 @@
+<!--引入导航栏-->
+<div ng-include="'views/nav.html'"></div>
+<!--添加用户按钮-->
+<button class="btn btn-primary" ng-click="addUser()" data-toggle="modal" data-target="#myAddModal">添加用户
+</button>
+<!--添加用户按钮-->
+<button class="btn btn-primary" ng-click="updateUser()" data-toggle="modal" data-target="#myUpdateModal">修改用户
+</button>
+<!--用户列表-->
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <th>#</th>
+        <th>用户名</th>
+        <th>角色</th>
+        <th>操作</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+1}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+1}}</td>
+            <td>{{'赵春良'}}</td>
+            <td>{{'学生'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+1}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+2}}</td>
+            <td>{{'张三'}}</td>
+            <td>{{'管理员'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+1}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+3}}</td>
+            <td>{{'张三'}}</td>
+            <td>{{'管理员'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+1}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+4}}</td>
+            <td>{{'张三'}}</td>
+            <td>{{'管理员'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+5}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+5}}</td>
+            <td>{{'张三'}}</td>
+            <td>{{'管理员'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+6}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+6}}</td>
+            <td>{{'张三'}}</td>
+            <td>{{'管理员'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        <tr>
+            <td ng-repeat="user in users"></td>
+            <!--<td>{{$index=+7}}</td>-->
+            <!--<td>{{user.username}}</td>-->
+            <!--<td>{{user.role}}</td>-->
+            <td>{{$index=+7}}</td>
+            <td>{{'张三'}}</td>
+            <td>{{'管理员'}}</td>
+            <td>
+                <button ng-click="remove(user)" class="btn btn-primary">删除用户</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--添加用户-->
+<div class="modal fade" id="myAddModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-horizontal">
+                    <!--用户名-->
+                    <div class="form-group">
+                        <label for="username" class="col-sm-2">用户名</label>
+
+                        <div class="col-sm-6"></div>
+                        <input type="text" class="form-control" id="username" placeholder="用户名"
+                               ng-model="addedUser.username"/>
+                    </div>
+                    <!--密码-->
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2">密码</label>
+
+                        <div class="col-sm-6"></div>
+                        <input type="password" class="form-control" id="password" placeholder="密码"
+                               ng-model="addedUser.password"/>
+                    </div>
+                    <!--角色-->
+                    <div class="form-group">
+                        <label for="role" class="col-sm-2">角色</label>
+
+                        <div class="col-sm-6"></div>
+                        <input type="number" class="form-control" id="role" placeholder="角色"
+                               ng-model="addedUser.role"/>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="submit()">添加用户</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--修改用户-->
+<div class="modal fade" id="myUpdateModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-horizontal">
+                    <!--用户名-->
+                    <div class="form-group">
+                        <label for="username" class="col-sm-2">用户名</label>
+
+                        <div class="col-sm-6"></div>
+                        <input type="text" class="form-control" id="username" placeholder="用户名"
+                               ng-model="addedUser.username" ng-value="张三" value="张三"/>
+                    </div>
+                    <!--密码-->
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2">密码</label>
+
+                        <div class="col-sm-6"></div>
+                        <input type="password" class="form-control" id="password" placeholder="密码"
+                               ng-model="addedUser.password" ng-value="111111"/>
+                    </div>
+                    <!--角色-->
+                    <div class="form-group">
+                        <label for="role" class="col-sm-2">角色</label>
+
+                        <div class="col-sm-6"></div>
+                        <input type="number" class="form-control" id="role" placeholder="角色"
+                               ng-model="addedUser.role" ng-value="教师"/>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="submit()">修改用户</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

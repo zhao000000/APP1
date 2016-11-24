@@ -1,0 +1,16 @@
+项目实战：
+    目录结构：
+        项目名称：
+            images -存放图片素材
+            css -存放样式
+            libs -存放库文件
+            js -业务逻辑相关文件
+                app.js -入口文件
+                config  -配置文件
+                controllers -控制器
+                directives -指令
+                filters -过滤器
+                services -服务
+            views -模板文件
+            test -测试文件
+    模块化：

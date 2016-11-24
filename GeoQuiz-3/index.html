@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <!--基本引入:类库-->
+    <script type="text/javascript" src="libs/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/angular-csp.css"/>
+
+    <script type="text/javascript" src="libs/angular.js"></script>
+    <script type="text/javascript" src="libs/angular-resource.js"></script>
+    <script type="text/javascript" src="libs/angular-route.js"></script>
+
+    <script type="text/javascript" src="libs/bootstrap.js"></script>
+
+    <!--入口文件-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <!--控制器-->
+    <script type="text/javascript" src="js/controllers/indexControllers.js"></script>
+    <!--配置文件-->
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <!--服务-->
+    <script type="text/javascript" src="js/services/UserService.js"></script>
+    <title>项目架构</title>
+</head>
+<body>
+<div ng-view></div>
+</body>
+</html>
